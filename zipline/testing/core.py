@@ -38,11 +38,9 @@ from zipline.data.minute_bars import (
     BcolzMinuteBarWriter,
     US_EQUITIES_MINUTES_PER_DAY
 )
-from zipline.data.us_equity_pricing import (
-    BcolzDailyBarReader,
-    BcolzDailyBarWriter,
-    SQLiteAdjustmentWriter,
-)
+from zipline.data.bcolz_daily_bars import BcolzDailyBarReader
+from zipline.data.adjustments import SQLiteAdjustmentReader
+
 from zipline.finance.blotter import SimulationBlotter
 from zipline.finance.order import ORDER_STATUS
 from zipline.lib.labelarray import LabelArray
