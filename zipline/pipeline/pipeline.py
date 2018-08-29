@@ -259,7 +259,7 @@ class Pipeline(object):
         Includes all terms registered as data outputs of the pipeline, plus the
         screen, if present.
         """
-        terms = self._columns.values()
+        terms = list(six.itervalues(self._columns))
         screen = self.screen
         if screen is not None:
             terms.append(screen)
