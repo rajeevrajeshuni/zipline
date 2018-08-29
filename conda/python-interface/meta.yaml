@@ -25,6 +25,8 @@ requirements:
   run:
     - python
     - six
+    - funcsigs  # [py2k]
+    - typing  # [py2k or py34]
 
 test:
   imports:
