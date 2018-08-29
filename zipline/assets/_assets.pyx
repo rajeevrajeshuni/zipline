@@ -213,7 +213,8 @@ cdef class Asset:
         -------
         boolean: whether the asset's exchange is open at the given minute.
         """
-        return self.calendar.is_open_on_minute(dt_minute)
+        calendar = get_calendar(self.exchange)
+        return calendar.is_open_on_minute(dt_minute)
 
 
 cdef class Equity(Asset):
